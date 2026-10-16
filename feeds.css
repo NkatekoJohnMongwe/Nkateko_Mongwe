@@ -1,0 +1,107 @@
+/* Live news section for Viewpoint. All classes are prefixed feed- so they
+   don't interfere with style.css. Accent matches the NM favicon teal. */
+
+.feed-section { padding-bottom: 3rem; }
+
+.feed-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0 0 .75rem;
+}
+
+.feed-filters button,
+.feed-btn {
+  font: inherit;
+  font-size: .9rem;
+  line-height: 1.2;
+  padding: .5rem .9rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.feed-filters button:hover,
+.feed-btn:hover { border-color: #0B5563; }
+
+.feed-filters button[aria-pressed="true"] {
+  background: #0B5563;
+  border-color: #0B5563;
+  color: #fff;
+}
+
+.feed-filters button:focus-visible,
+.feed-btn:focus-visible,
+.feed-title:focus-visible {
+  outline: 2px solid #0B5563;
+  outline-offset: 2px;
+}
+
+.feed-status {
+  margin: 1.25rem 0 .5rem;
+  font-size: .9rem;
+  opacity: .75;
+}
+
+.feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feed-item {
+  padding: 1.1rem 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+}
+.feed-item:last-child {
+  border-bottom: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+}
+
+.feed-title {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+}
+.feed-title:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.feed-summary {
+  margin: .4rem 0 0;
+  max-width: 68ch;
+  font-size: .95rem;
+  line-height: 1.55;
+  opacity: .85;
+}
+
+.feed-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 0;
+  margin: .6rem 0 0;
+  font-size: .82rem;
+  opacity: .75;
+}
+.feed-meta > * + * {
+  margin-left: .6rem;
+  padding-left: .6rem;
+  border-left: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+.feed-source { font-weight: 600; }
+
+.feed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+.feed-actions [hidden] { display: none; }
+.feed-btn-quiet { border-color: transparent; opacity: .75; }
+.feed-btn-quiet:hover { opacity: 1; }
+
+@media (max-width: 560px) {
+  .feed-title { font-size: 1.1rem; }
+}
